@@ -84,7 +84,7 @@ registerCustomerController.register = async (req, res) => {
     //#3- Enviar el correo electrónico
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log("error");
+        console.log("error"+error);
         return res.status(500).json({ message: "Error sending email" });
       }
 
